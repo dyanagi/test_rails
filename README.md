@@ -1,24 +1,34 @@
-# README
+# test_rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+test_rails is for trying Rails-related features and gems and showing coding examples.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+```shell script
+# Install dependences
+bundle install
 
-* System dependencies
+# Create database
+bundle e rails db:setup
 
-* Configuration
+# Run
+bundle e rails s
+```
 
-* Database creation
+For detailed instruction: [How to Run an Existing Ruby-on-Rails Project Locally After Cloning a Repository](https://medium.com/@michaelyanagi/how-to-run-an-existing-ruby-on-rails-project-after-cloning-a-repository-8535e4f14bc9)
 
-* Database initialization
+## Dependencies
 
-* How to run the test suite
+Check out the details of the gems used in this project via the links in the Gemfile file.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Guidelines
+### Git
 
-* Deployment instructions
+* [GitHub flow](https://help.github.com/en/articles/github-flow): Create a branch from `master` and create a pull request from the branch.
+* Branch name should look like `reason__details--tag`. e.g. `feature__public-api--v3`. See: [Let the branch name do all the talking in git](https://codeburst.io/let-the-branch-name-do-all-the-talking-in-git-e614ff85aa30)
 
-* ...
+## Features
+### Authentication
+
+Devise - User model
+
