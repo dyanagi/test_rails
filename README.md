@@ -3,15 +3,18 @@
 test_rails is for trying Rails-related features and gems and showing coding examples.
 
 ## Setup
-
+Install dependencies
 ```shell script
-# Install dependences
 bundle install
+```
 
-# Create database
+Setup database
+```shell script
 bundle e rails db:setup
+```
 
-# Run
+Start the Rails server
+```shell script
 bundle e rails s
 ```
 
@@ -23,12 +26,12 @@ Check out the details of the gems used in this project via the links in the Gemf
 
 ## Guidelines
 ### Git
-
 * [GitHub flow](https://help.github.com/en/articles/github-flow): Create a branch from `master` and create a pull request from the branch.
 * Branch name should look like `reason__details--tag`. e.g. `feature__public-api--v3`. See: [Let the branch name do all the talking in git](https://codeburst.io/let-the-branch-name-do-all-the-talking-in-git-e614ff85aa30)
 
+### README
+* Write comments outside of the code blocks where the spell checker works.
+
 ## Features
 ### Authentication
-
 Devise - User model
-
