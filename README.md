@@ -4,17 +4,17 @@ test_rails is for trying Rails-related features and gems and showing coding exam
 
 ## Setup
 Install dependencies
-```shell script
+```bash
 bundle install
 ```
 
 Setup database
-```shell script
+```bash
 bundle e rails db:setup
 ```
 
 Start the Rails server
-```shell script
+```bash
 bundle e rails s
 ```
 
