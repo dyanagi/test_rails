@@ -46,9 +46,16 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
+  # Test Data Generation
+  # https://github.com/thoughtbot/factory_bot_rails
+  gem 'factory_bot_rails'
+
   # RSpec
   # https://github.com/rspec/rspec-rails
   gem 'rspec-rails', '~> 3.8'
+
+  # https://github.com/stympy/faker
+  gem 'faker'
 end
 
 group :development do
@@ -62,8 +69,31 @@ group :development do
   # Email in Browser
   # https://github.com/ryanb/letter_opener
   gem "letter_opener"
+
+  # RuboCop
+  # https://github.com/rubocop-hq/rubocop
+  gem 'rubocop', '~> 0.74.0', require: false
+  # https://github.com/toshimaru/rubocop-rails
+  gem 'rubocop-rails'
+  # https://github.com/rubocop-hq/rubocop-rspec
+  gem 'rubocop-rspec'
 end
 
+group :test do
+  # https://github.com/thoughtbot/shoulda-matchers
+  gem 'shoulda-matchers'
+
+  # https://github.com/bblimke/webmock
+  gem 'webmock'
+
+  # System Test
+  # https://github.com/teamcapybara/capybara
+  gem 'capybara'
+  # https://github.com/mattheworiordan/capybara-screenshot
+  gem 'capybara-screenshot'
+  # https://github.com/titusfortner/webdrivers
+  gem 'webdrivers'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -1,0 +1,83 @@
+require:
+- rubocop-rails
+- rubocop-rspec
+
+AllCops:
+  Exclude:
+  - 'node_modules/**/*'
+  - 'bin/**/*'
+  - 'db/**/*'
+  - 'config/**/*'
+  - 'Rakefile'
+  - '**/*.rake'
+
+Metrics/LineLength:
+  Max: 168
+
+# Please use double quotes for consistency and productivity.
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  Enabled: true
+  Exclude:
+  - 'config.ru'
+  - 'Gemfile'
+
+Layout/IndentationWidth:
+  Enabled: false
+Layout/CommentIndentation:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Exclude:
+  - 'Gemfile'
+
+Style/SymbolArray:
+  Exclude:
+  - 'Gemfile'
+
+Style/BlockComments:
+  Exclude:
+  - 'spec/spec_helper.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  Exclude:
+  - 'config.ru'
+  - 'Gemfile'
+  - 'Rakefile'
+  - 'app/views/**/*'
+  - 'config/**/*'
+  - 'db/**/*'
+  - 'lib/tasks/**/*'
+  - 'spec/**/*'
+
+Style/Documentation:
+  Exclude:
+  - 'spec/**/*'
+  - 'app/controllers/**/*'
+  - 'app/helpers/**/*'
+  - 'app/mailers/application_mailer.rb'
+  - 'app/models/application_record.rb'
+  - 'app/services/**/update_service.rb'
+  - 'app/services/**/create_service.rb'
+  - 'app/services/**/destroy_service.rb'
+
+Metrics/BlockLength:
+  Exclude:
+  - 'spec/**/*'
+
+RSpec/DescribeClass:
+  Exclude:
+  - 'spec/system/**/*'
+
+RSpec/MultipleExpectations:
+  Exclude:
+  - 'spec/system/**/*'
+
+RSpec/ExampleLength:
+  Exclude:
+  - 'spec/system/**/*'
+
+Metrics/AbcSize:
+  Exclude:
+  - 'spec/system/**/*'
