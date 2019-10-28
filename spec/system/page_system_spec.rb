@@ -9,7 +9,6 @@ RSpec.describe "Page", type: :system do
       expect(page).to have_content("Rails Test Home")
       expect(page).to have_content("a rails test project")
       expect(page).to have_content("Log in")
-      expect(page).to have_content("this should fail")
       expect(page).to have_content("Sign up")
     end
 
