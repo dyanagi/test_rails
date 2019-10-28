@@ -5,7 +5,7 @@
 version: 2
 jobs:
   build:
-    parallelism: 3 # run three instances of this job in parallel
+    parallelism: 3
     docker:
     # specify the version you desire here
     - image: circleci/ruby:2.6.3-node-browsers
