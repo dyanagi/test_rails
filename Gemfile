@@ -42,6 +42,29 @@ gem 'devise'
 # https://github.com/tigrish/devise-i18n
 gem 'devise-i18n'
 
+group :test do
+  # RSpec
+  # https://github.com/rspec/rspec-rails
+  gem 'rspec-rails', '~> 3.8'
+
+  # For Circle CI
+  gem "rspec_junit_formatter"
+
+  # https://github.com/thoughtbot/shoulda-matchers
+  gem 'shoulda-matchers'
+
+  # https://github.com/bblimke/webmock
+  gem 'webmock'
+
+  # System Test
+  # https://github.com/teamcapybara/capybara
+  gem 'capybara'
+  # https://github.com/mattheworiordan/capybara-screenshot
+  gem 'capybara-screenshot'
+  # https://github.com/titusfortner/webdrivers
+  gem 'webdrivers'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -49,10 +72,6 @@ group :development, :test do
   # Test Data Generation
   # https://github.com/thoughtbot/factory_bot_rails
   gem 'factory_bot_rails'
-
-  # RSpec
-  # https://github.com/rspec/rspec-rails
-  gem 'rspec-rails', '~> 3.8'
 
   # https://github.com/stympy/faker
   gem 'faker'
@@ -77,22 +96,6 @@ group :development do
   gem 'rubocop-rails'
   # https://github.com/rubocop-hq/rubocop-rspec
   gem 'rubocop-rspec'
-end
-
-group :test do
-  # https://github.com/thoughtbot/shoulda-matchers
-  gem 'shoulda-matchers'
-
-  # https://github.com/bblimke/webmock
-  gem 'webmock'
-
-  # System Test
-  # https://github.com/teamcapybara/capybara
-  gem 'capybara'
-  # https://github.com/mattheworiordan/capybara-screenshot
-  gem 'capybara-screenshot'
-  # https://github.com/titusfortner/webdrivers
-  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
