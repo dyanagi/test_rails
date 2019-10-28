@@ -35,3 +35,8 @@ Check out the details of the gems used in this project via the links in the Gemf
 ## Features
 ### Authentication
 Devise - User model
+
+### Circle CI
+
+* `.circleci/config.yml` - Config file
+* `rspec_junit_formatter` gem - Formats RSpec results for Circle CI to be able to read
