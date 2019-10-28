@@ -9,7 +9,7 @@ jobs:
     docker:
     # specify the version you desire here
     - image: circleci/ruby:2.6.3-node-browsers
-        environment: # environment variables for primary container
+        environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
@@ -18,7 +18,7 @@ jobs:
           RAILS_ENV: test
 
     - image: circleci/postgres:11.4
-        environment: # environment variables for database
+        environment:
           POSTGRES_USER: circleci-demo-ruby
           POSTGRES_DB: test_rails_test
           POSTGRES_PASSWORD: ""
@@ -46,7 +46,7 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
 
-    - run: # Install Ruby dependencies
+    - run:
         name: install dependencies
         command: |
           bundle install --jobs=4 --retry=3 --path vendor/bundle
