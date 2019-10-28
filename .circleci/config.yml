@@ -52,13 +52,13 @@ jobs:
 
     # Store bundle cache for Ruby dependencies
     - save_cache:
+        key: v1-dependencies-{{ checksum "Gemfile.lock" }}
         paths:
         - ./vendor/bundle
-        key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
-        - run:
-            name: Wait for DB
-            command: dockerize -wait tcp://localhost:5432 -timeout 1m
+    - run:
+        name: Wait for DB
+        command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
     # Database setup
     - run: bundle exec rake db:setup
@@ -73,7 +73,6 @@ jobs:
                             --out test_results/rspec.xml \
                             --format progress \
                             $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
-
 
     # collect reports
     - store_test_results:
