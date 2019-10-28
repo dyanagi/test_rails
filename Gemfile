@@ -45,6 +45,10 @@ gem 'devise-i18n'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # RSpec
+  # https://github.com/rspec/rspec-rails
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do
